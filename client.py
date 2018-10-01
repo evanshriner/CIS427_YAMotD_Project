@@ -28,8 +28,11 @@ def session_loop():
             # check if quit command entered
             elif command_tokens[0] == constants.END_SESSION:
                 session = False
+            elif command_tokens[0] == constants.ROOT_SHUTDOWN:
+                return True
         else:
             print(response)  # print the received error
+    return False
 
 
 def success(res):
@@ -56,8 +59,8 @@ if __name__ == "__main__":
 
     print("Connected to server. Enter a command...")
     # start session loop
-    session_loop()
-    # client quit, close connection
-    client.shutdown(socket.SHUT_RDWR)
-    client.close()
+    if not session_loop():
+        # client quit, close connection
+        client.shutdown(socket.SHUT_RDWR)
+        client.close()
     print("Ending session...")
