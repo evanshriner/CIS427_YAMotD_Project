@@ -1,3 +1,7 @@
+# Christian Munte, Evan Shriner
+# CIS 427 - Prof. J.P. Baugh
+# Fall 2018
+
 # Server definitions
 HOST = 'localhost'  # The server's hostname or IP address
 SERVER_PORT = 6969  # The port used by the server

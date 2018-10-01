@@ -1,5 +1,10 @@
 #!/usr/bin/python
 
+# Christian Munte
+# Evan Shriner
+# CIS 427 with Prof J Dawg
+# Fall 2018
+
 import socket
 import sys
 import constants
